@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vrp_market</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+<style>
+    @font-face {
+        src: url('fonte/gta-fonte.ttf');
+        font-family: gta;
+    }
+
+    .botaoselect:hover {
+        text-decoration: none;
+        text-transform: none;
+    }
+
+    .botao {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+
+    .botaoselect {
+        transition: .2s;
+        color: black;
+        text-align: center;
+        font-family: Poppins;
+    }
+
+    .botaoselect:hover {
+        color: red;
+    }
+
+    .row {
+        margin-bottom: 6px;
+    }
+
+    ::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background-color: rgb(140, 1, 1);
+    height: 20px;
+}
+
+#closebtn {
+   position: absolute;
+   top: 3.2%;
+   right: 2%;
+   color: white;
+   font-size: 1.3em;
+}
+
+.option {
+    background-color: rgba(240, 240, 240, .6);
+}
+
+</style>
+
+<body style="background: transparent;">
+    <div class="container" style="display: none;">
+        <div class="menu"
+            style="width: 400px; height: 425px; overflow: auto; overflow-x: hidden;border-radius: 3px; background-color: rgba(180, 180, 180, .7);position: absolute;top:50%;left:50%;transform:translate(-50%,-50%); border-bottom: 4px solid rgb(180, 1, 1);">
+            <header style="background-image: linear-gradient(to bottom right, rgb(200,0,0), rgb(121, 6, 6));">
+                <h1 style="font-family: gta; text-align: center; font-weight: bold; color: white;">Mercado</h1>
+				<p><i id="closebtn" class="fas fa-sign-out-alt"></i></p>
+            </header>
+            <div class="secao" style="padding: 1px 2px 1px 2px;">
+                <div class="row" style="padding: 9px;">
+                    <div class="col-4">
+                        <div class="option"
+                            style="padding: 5px;border-radius: 3px;">
+                            <img data-toggle="tooltip" title="Leite" src="img/leite.png" width="51px;"
+                                style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                            <div class="botao">
+                                <a href="#" id="leite" class="botaoselect">R$ 2</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="option"
+                            style="padding: 5px;border-radius: 3px;">
+                            <img data-toggle="tooltip" title="Água" src="img/agua.png" width="51px;"
+                                style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                            <div class="botao">
+                                <a href="#" id="agua" class="botaoselect">R$ 2</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="option"
+                            style="padding: 5px;border-radius: 3px;">
+                            <img data-toggle="tooltip" title="Vinho" src="img/vinho.png" width="51px;"
+                                style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                            <div class="botao">
+                                <a href="#" id="vinho" class="botaoselect">R$ 8</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding: 9px;">
+                    <div class="col-4">
+                        <div class="option"
+                            style="padding: 5px;border-radius: 3px;">
+                            <img data-toggle="tooltip" title="Suco" src="img/suco.png" width="51px;"
+                                style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                            <div class="botao">
+                                <a href="#" id="suco" class="botaoselect">R$ 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="option"
+                            style="padding: 5px;border-radius: 3px;">
+                            <img data-toggle="tooltip" title="Limonada" src="img/limonada.png" width="51px;"
+                                style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                            <div class="botao">
+                                <a href="#" id="limonada" class="botaoselect">R$ 14</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="option"
+                            style="padding: 5px;border-radius: 3px;">
+                            <img data-toggle="tooltip" title="Vodka" src="img/vodka.png" width="51px;"
+                                style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                            <div class="botao">
+                                <a href="#" id="vodka" class="botaoselect">R$ 30</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding: 9px;">
+                    <div class="col-4">
+                        <div class="option"
+                            style="padding: 5px;border-radius: 3px;">
+                            <img data-toggle="tooltip" title="Pão" src="img/pao.png" width="51px;"
+                                style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                            <div class="botao">
+                                <a href="#" id="pao" class="botaoselect">R$ 2</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="option"
+                            style="padding: 5px;border-radius: 3px;">
+                            <img data-toggle="tooltip" title="Pipoca" src="img/pipoca.png" width="51px;"
+                                style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                            <div class="botao">
+                                <a href="#" id="pipoca" class="botaoselect">R$ 2</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="option"
+                            style="padding: 5px;border-radius: 3px;">
+                            <img data-toggle="tooltip" title="Espaguete" src="img/espaguete.png" width="51px;"
+                                style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                            <div class="botao">
+                                <a href="#" id="espaguete" class="botaoselect">R$ 8</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="padding: 9px;">
+                        <div class="col-4">
+                            <div class="option"
+                                style="padding: 5px;border-radius: 3px;">
+                                <img data-toggle="tooltip" title="Pizza" src="img/pizza.png" width="51px;"
+                                    style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                                <div class="botao">
+                                    <a href="#" id="pizza" class="botaoselect">R$ 65</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="option"
+                                style="padding: 5px;border-radius: 3px;">
+                                <img data-toggle="tooltip" title="Rosquinha" src="img/rosquinha.png" width="51px;"
+                                    style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                                <div class="botao">
+                                    <a href="#" id="rosquinha" class="botaoselect">R$ 4</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="option"
+                                style="padding: 5px;border-radius: 3px;">
+                                <img data-toggle="tooltip" title="GPS" src="img/gps.png" width="51px;"
+                                    style="position: relative; top:50%; left:50%; transform: translate(-50%); margin-bottom: 10px;">
+                                <div class="botao">
+                                    <a href="#" id="gps" class="botaoselect">R$ 300</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+<script src="ui.js"></script>
+</body>
+
+</html>

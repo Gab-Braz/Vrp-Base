@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@font-face {
+    src: url(font/gta-fonte.ttf);
+    font-family: gta;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.kit-unimed, .kit-repair, .cnh-area, .porte-area {
+    width: 280px;
+    border-bottom: 3px solid rgb(180, 0, 0);
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(180, 180, 180, .8);
+    display: none;
+}
+
+.kit-header{
+    padding: 4px;
+    background-image: linear-gradient(to bottom right, rgba(200,0,0,.8), rgba(121, 6, 6,.8));
+}
+
+.kit-title {
+    text-align: center;
+    color: white;
+    font-family: gta;
+    font-size: 2em;
+}
+
+.logo {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 20px;
+}
+
+.fim {
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pegar {
+    text-align: center;
+    text: bold;
+    font-weight: 600;
+    background-color: rgba(150, 150, 150,.8);
+    padding: 8px;
+    font-family: 'poppins';
+    cursor: pointer;
+    transition: .5s;
+    border: 1px solid rgb(180, 0, 0);
+    border-radius: 3px;
+}
+
+.pegar:hover {
+    background-color: rgba(50, 50, 50,.8);
+    color: white;
+}
+
+#close,.closebtn {
+    color: white;
+    position: absolute;
+    top: 6.5%;
+    right: 3%;
+    cursor: pointer;
+}

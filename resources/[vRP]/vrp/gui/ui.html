@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+@font-face {
+	font-family: 'GTA';
+	src: url(gta-fonte.ttf);
+}
+@font-face {
+  font-family: 'gta2';
+  src: url(gta2.ttf);
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.console{
+  background-color: white;
+  color: red;
+  font-weight: bold;
+}
+
+.menu{
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  width: 250px;
+  height: 50%;
+  position: absolute;
+  font-weight: bold;
+}
+
+.menu_description{
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  padding: 9px;
+  font-size: 1.2em;
+  max-width: 500px;
+}
+
+.menu h1{
+  background-color: rgba(255,0,0,0.75);
+  color: white;
+  text-align: center;
+  font-size: 1.6em;
+  padding: 6px;
+}
+
+.choices{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.choices::-webkit-scrollbar{ 
+  display: none; 
+}
+
+.choices > div{
+  padding: 6px;
+  font-size: 1.3em;
+}
+
+.choices .selected{
+  background-color: rgba(255,255,255,0.90);
+  color: black;
+}
+
+.wprompt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(100,100,100,0.75);
+  color: white;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'gta2';
+  border: 2px solid rgba(140, 10, 10,0.8);
+  border-radius: 10px;
+  margin: 0;
+}
+
+.wprompt h1{
+  font-size: 1.4em;
+  font-family: 'gta2';
+  background-color: rgba(140, 10, 10,0.8);
+  padding: 2px;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin: 0;
+}
+
+.wprompt textarea{
+  outline: none !important;
+  background-color: rgba(90,90,90,0.75);
+  flex: 1;
+  color: white;
+  width: 100%;
+  padding: 2px;
+  resize: none;
+  box-sizing: border-box;
+  font-family: 'gta2';
+}
+
+.wprompt textarea:focus{
+  outline: none !important;
+}
+
+.wprompt .help{
+  font-size: 0.9em;
+  font-style: italic;
+  font-family: gta2;
+  padding: 3px;
+}
+
+
+.request_manager{
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  text-align: right;
+  color: white;
+  background-color: rgba(10, 10 ,10,.6);
+  border: 2px solid rgb(140, 10, 10);
+  padding: 10px;
+  font-family: 'gta2';
+  border-radius: 2px;
+  font-size: 1.3em;
+  background-image: url(https://icon-icons.com/icons2/1380/PNG/72/vcslocallymodifiedunstaged_93505.png);
+  background-repeat: no-repeat;
+  padding-left: 45px;
+  background-position: 2.5px;
+  background-size: 40px;
+}
+
+.request_manager div{
+  margin-top: 10px;
+}
+
+.request_manager div > span{
+  font-size: 1.2em;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.50);
+  padding: 4px;
+}
+
+.request_manager .yes{
+  background-color: rgb(10, 140, 10);
+  border: 1px solid white;
+  margin-left: 10px;
+  padding: 3px;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.request_manager .no{
+  background-color: rgb(150, 10, 10);
+  border: 1px solid white;
+  margin-left: 7px;
+  padding: 3px;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.announce{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 780px;
+  height: 130px;
+  padding: 10px;
+  margin-left: -400px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-shadow: 2px 2px black;
+  color: white;
+  display: none;
+  opacity: 0.90;
+}
+</style>
+<body>
+    <div class="console">
+        <!-- <div class="menu">
+            <div class="menu_description"></div>
+            <h1>Sun Happy</h1>
+            <div class="choices">
+                <div>Amorim</div>
+            </div>
+        </div> -->
+        <!-- <div class="wprompt">
+          <h1>Digite sim ou não para verificar</h1>
+          <textarea cols="30" rows="10"></textarea>
+          <div class="help">Pressione ESC para sair</div>
+        </div> -->
+        <!-- <div class="request_manager notify bar-top do-show"><span class="span1 data-notification-status="success"">Socorro Samu Estou Morrendo<span class="yes">[F5]</span><span class="no"> [F6]</span>  180s      <i class="fas fa-comment" style="width: 20px;height: 20px;"></i></div> -->
+        <!-- <div class="announce"><span>Vamos fuder até o talo</span></div> -->
+    </div>
+</body>
+</html>
